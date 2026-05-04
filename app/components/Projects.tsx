@@ -4,15 +4,33 @@ import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { Button } from "../components/ui/button";
 
-const categories = ["All", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind"] as const;
+const categories = ["All", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind", "HTML", "CSS"] as const;
 type Category = typeof categories[number];
 
-const projects: { title: string; desc: string; category: Exclude<Category, "All">; gradient: string }[] = [
-  { title: "FinFlow Dashboard", desc: "React · TypeScript · Recharts", category: "React", gradient: "from-blue-500 to-cyan-400" },
-  { title: "Lumen Marketing Site", desc: "JavaScript · Framer Motion", category: "JavaScript", gradient: "from-purple-500 to-pink-400" },
-  { title: "Devlog Platform", desc: "Next.js · MDX · Tailwind", category: "Next.js", gradient: "from-emerald-500 to-teal-400" },
-  { title: "Type-safe API Client", desc: "TypeScript · Zod · tRPC", category: "TypeScript", gradient: "from-amber-500 to-orange-400" },
-  { title: "Component Library", desc: "Tailwind · Radix · Storybook", category: "Tailwind", gradient: "from-sky-500 to-indigo-400" },
+const projects: {
+  title: string;
+  desc: string;
+  category: Exclude<Category, "All">;
+  image: string;
+}[] = [
+  {
+    title: "Godforfactor",
+    desc: "Ecommerce website for a shoe brand",
+    category: "React",
+    image: "/img/godforfactor.png",
+  },
+  {
+    title: "Shop.co",
+    desc: "Multi-vendor ecommerce platform",
+    category: "Next.js",
+    image: "/img/shopco.png",
+  },
+  {
+    title: "Portfolio Website",
+    desc: "Personal developer portfolio showcasing projects and skills",
+    category: "Tailwind",
+    image: "/img/portfolio.png",
+  },
 ];
 
 export function Projects() {
@@ -43,8 +61,9 @@ export function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filtered.map((p, i) => (
             <article key={`${p.title}-${i}`} className="group">
-              <div className={`aspect-4/3 rounded-xl bg-linear-to-br ${p.gradient} mb-4 overflow-hidden relative`}>
-                <div className="absolute inset-0 bg-background/20 group-hover:bg-background/0 transition-colors" />
+              <div className="aspect-4/3 rounded-xl mb-4 overflow-hidden relative">
+                <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-background/20 group-hover:bg-background/0 transition-colors" />
               </div>
               <div className="flex items-start justify-between gap-4">
                 <div>

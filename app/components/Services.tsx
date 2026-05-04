@@ -51,7 +51,7 @@ export function Services() {
               <p className="text-sm text-muted-foreground leading-relaxed">{services[3].desc}</p>
             </div>
             <img
-              src={"/img/Georgina.png"}
+              src={"/img/components.png"}
               alt="Component library visualization"
               loading="lazy"
               width={180}
