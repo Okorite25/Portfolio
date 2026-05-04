@@ -27,7 +27,7 @@ export function About() {
         </div>
 
         <div className="flex justify-center mt-10" id="resume">
-        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           <Button size="lg" variant="outline" className="rounded-full bg-white text-black hover:bg-[#A78BFA] hover:text-gray-600 transition duration-500">
             View CV
           </Button>
