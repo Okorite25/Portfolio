@@ -26,7 +26,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg text-white"
+              className="text-lg text-white hover:text-[#A78BFA] transition-colors duration-300"
             >
               {item.label}
             </Link>

@@ -12,24 +12,29 @@ const projects: {
   desc: string;
   category: Exclude<Category, "All">;
   image: string;
+  url: string;
 }[] = [
   {
     title: "Godforfactor",
     desc: "Ecommerce website for a shoe brand",
     category: "React",
     image: "/img/godforfactor.png",
+    url: "https://godfactorbrand.com"
   },
+  
   {
     title: "Shop.co",
     desc: "Multi-vendor ecommerce platform",
     category: "Next.js",
     image: "/img/shopco.png",
+    url: "https://shop-co-nine-beta.vercel.app/"
   },
   {
     title: "Portfolio Website",
     desc: "Personal developer portfolio showcasing projects and skills",
     category: "Tailwind",
     image: "/img/portfolio.png",
+    url:"https://davidwestokoritegeorgina.vercel.app/"
   },
 ];
 
@@ -70,9 +75,11 @@ export function Projects() {
                   <h3 className="font-display font-semibold">{p.title}</h3>
                   <p className="text-xs text-muted-foreground mt-1">{p.desc}</p>
                 </div>
-                <button className="w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0 hover:scale-110 transition-transform">
+                <a href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"className="w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0 hover:scale-110 transition-transform">
                   <ArrowUpRight size={16} />
-                </button>
+                </a>
               </div>
             </article>
           ))}
