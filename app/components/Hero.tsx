@@ -13,7 +13,7 @@ export function Hero() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full blur-2xl opacity-50" style={{ background: "var(--gradient-primary)" }} />
             <img
-              src={"/img/Okorite.png"}
+              src={"/img/Georgina.png"}
               alt="David-West Okorite Georgina"
               width={180}
               height={180}
